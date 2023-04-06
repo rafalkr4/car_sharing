@@ -109,21 +109,21 @@
     <section class="box">
         <div class="box__inner">
             <h2 class="hdl">CONTACT</h2>
-            <div class="cols">
+            <div class="cols cols--wrapper">
                 <img class="formPhoto" src="./src/images/form_photo.png" alt="Form Photo">
                 <form class="contactForm">
                     <input type="text" class="contactForm__input" placeholder="Type your name">
                     <input type="email" class="contactForm__input" placeholder="Type your e-mail">
-                    <textarea cols="30" rows="10" placeholder="Type your message"></textarea>
+                    <textarea cols="30" rows="7" class="contactForm__input" placeholder="Type your message"></textarea>
                     <div class="contactForm__group">
-                        <label for="agreement">I hereby give consent for my personal data included in my application to
+                        <label for="agreement" class="contactForm__lbl">I hereby give consent for my personal data included in my application to
                             be processed for the purposes of the recruitment process under the European Parliament's and
                             Council of the European Union Regulation on the Protection of Natural Persons as of 27 April
                             2016, with regard to the processing of personal data and on the free movement of such data,
                             and repealing Directive 95/46/EC (Data Protection Directive)</label>
-                        <input type="checkbox" id="agreement">
+                        <input type="checkbox" id="agreement" class="contactForm__agreement">
                     </div>
-                    <input type="submit" value="Send" class="btn btn--sm btn--outline">
+                    <input type="submit" value="Send" class="contactForm__submit btn btn--sm btn--outline">
                 </form>
             </div>
         </div>
