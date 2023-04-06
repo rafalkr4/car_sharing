@@ -11,11 +11,58 @@
     --gray-6: #00000040;
     --gray-7: #00000066;
     --gray-8: #28272C;
-    --max-width: 68rem;
+    --max-width: 70rem;
 }
 html,body {
     font-size: 16px;
 }
+.btn {
+    text-decoration: none;
+    font-weight: 700;
+    line-height: 1.375;
+    color: var(--primary);
+    background-color: var(--white);
+    display: inline-block;
+    min-width: 11.375rem;
+    padding: 1.375rem;
+    border-radius: 2.5rem;
+    transition: all 400ms ease-in-out;
+}
+
+.btn:hover {
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+.btn--icon {
+    width: 3.4375rem;
+    height: 3.4375rem;
+    padding: 0;
+    min-width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-arrow {
+    fill: var(--white);
+    transition: fill 400ms ease-in-out;
+}
+.btn--icon:hover .icon-arrow {
+    fill: var(--primary);
+}
+
+.btn--sm {}
+.btn--primary {
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+.btn--primary:hover {
+    color: var(--primary);
+    background-color: var(--white);
+}
+
 
 .intro {
     background-image: url("../images/intro_bg.png");
@@ -23,7 +70,16 @@ html,body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
 }
+
+.intro .intro.__scroll {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 20%);
+}
+
 
 .header {
     background-color: var(--gray-6);
@@ -32,6 +88,8 @@ html,body {
 .header .header__inner {
     width: 100%;
     max-width: var(--max-width);
+    padding-inline: 1rem;
+    box-sizing: border-box;
     margin-inline: auto;
     display: flex;
     justify-content: space-between;
@@ -82,12 +140,43 @@ html,body {
     background-color: var(--gray-5);
 }
 
-.hero {}
-.hero .hero__hdl {}
-.hero .hero__lead {}
-.hero .hero__wrapper{}
-.hero .hero__btn {}
-.hero .hero__btn__btn--primary {}
-.hero .hero__btn.hero__btn--icon {
+.hero {
+    color: var(--white);
+    text-align: center;
+    font-family: "Nunito Sans", sans-serif;
+    width: 100%;
+    max-width: var(--max-width);
+    padding-inline: 1rem;
+    box-sizing: border-box;
+    margin-inline: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -5.5rem;
+
+
 
 }
+.hero .hero__hdl {
+    font-size: 5.625rem;
+    font-weight: 900;
+    font-family: "Nunito Sans", sans-serif;
+    color: var(--white);
+    text-align: center;
+    line-height: 1;
+    text-shadow: 0 .1875rem .375rem var(--gray-6);
+    margin: 0;
+}
+.hero .hero__lead {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-weight: 700;
+    margin: 0 0 3.375rem;
+}
+.hero .hero__wrapper {}
+.hero .hero__btn {}
+.hero .hero__btn.hero__btn--primary {
+    margin-right: 1.56rem;
+}
+
